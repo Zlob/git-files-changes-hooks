@@ -1,0 +1,20 @@
+{
+    "name": "vamakin/git-hooks",
+    "description": "Git hooks for PHP projects",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vlad Makin",
+            "email": "vamakin@gmail.com"
+        }
+    ],
+    "require": {
+        "composer/composer": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "GitHooks\\": "src/"
+        }
+    }
+}

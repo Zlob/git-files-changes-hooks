@@ -1,0 +1,41 @@
+#!/usr/bin/env php
+<?php
+
+use GitHooks\Hooks\BowerInstallHandler;
+use GitHooks\Hooks\ComposerInstallHandler;
+use GitHooks\Hooks\NpmInstallHandler;
+
+echo 'start'; //todo
+
+require_once ('/vendor/autoload.php');
+
+exec('git diff-tree -r --name-only --no-commit-id HEAD', $output);
+
+//todo export config
+//todo create binary?
+$handlers = [
+        'composer.lock' => ComposerInstallHandler::class,
+        'bower.json' => BowerInstallHandler::class,
+        'package.json' => NpmInstallHandler::class
+];
+
+foreach ($output as $line) {
+    $fileName = trim($line);
+    $fileName = 'composer.lock';
+    if (array_key_exists($fileName, $handlers)) {
+        $handler = new $handlers[$fileName];
+        $handler->handle($fileName);
+    }
+}
+
+exit(0);
+
+
+
+
+
+
+
+
+
+
