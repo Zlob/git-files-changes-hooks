@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+require_once('../vendor/autoload.php');
+
+$configPath = 'config.php';
+$config = new \Noodlehaus\Config($configPath);
+
+$postMergeOptions = $config->get('post-merge');
+
+$hook = new \Vamakin\GitHooks\Hooks\PostCheckoutHook($argv);
+$handler = new \Vamakin\GitHooks\Handler($hook);
+
+foreach ($postMergeOptions as $mask => $command) {
+    $handler->addCommand($mask, new $command);
+}
+
+$handler->handle();
+
+exit(0);

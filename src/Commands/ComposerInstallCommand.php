@@ -1,15 +1,12 @@
 <?php
 
-namespace GitHooks\Hooks;
+namespace Vamakin\GitHooks\Commands;
 
 use Composer\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
 
-class ComposerInstallHandler extends BaseHandler
+class ComposerInstallCommand extends BaseCommand
 {
-    protected $handlerName = 'composer.lock file has been changed';
-
-
     public function action()
     {
         $input = new ArrayInput(['command' => 'install']);
@@ -17,8 +14,10 @@ class ComposerInstallHandler extends BaseHandler
         $application->setAutoExit(false);
         $application->setCatchExceptions(false);
         $application->run($input);
-//        exec('composer install', $output);
-//        $this->result = $output;
-//        return $this;
+    }
+
+    protected function getName()
+    {
+        return 'composer.lock file has been changed';
     }
 }
