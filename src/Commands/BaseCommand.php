@@ -1,6 +1,6 @@
 <?php
 
-namespace Vamakin\PhpPackagesSynchronizer\Commands;
+namespace Vamakin\GitFilesChangesHooks\Commands;
 
 abstract class BaseCommand implements Command
 {

@@ -1,11 +1,11 @@
 <?php
 
-use Vamakin\PhpPackagesSynchronizer\Commands\BowerInstallCommand;
-use Vamakin\PhpPackagesSynchronizer\Commands\ComposerInstallCommand;
-use Vamakin\PhpPackagesSynchronizer\Commands\NpmInstallCommand;
+use Vamakin\GitFilesChangesHooks\Commands\BowerInstallCommand;
+use Vamakin\GitFilesChangesHooks\Commands\ComposerInstallCommand;
+use Vamakin\GitFilesChangesHooks\Commands\NpmInstallCommand;
 
 return $config = [
-    'post-update' => [
+    'post-checkout' => [
         'composer.lock' => ComposerInstallCommand::class,
         'bower.json' => BowerInstallCommand::class,
         'package.json' => NpmInstallCommand::class

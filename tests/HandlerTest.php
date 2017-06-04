@@ -1,6 +1,6 @@
 <?php
 
-use Vamakin\PhpPackagesSynchronizer\Handler;
+use Vamakin\GitFilesChangesHooks\Handler;
 
 class HandlerTest extends PHPUnit_Framework_TestCase
 {
@@ -8,11 +8,11 @@ class HandlerTest extends PHPUnit_Framework_TestCase
     public function test_handler_is_works()
     {
 
-        $hook = $this->createMock(\Vamakin\PhpPackagesSynchronizer\Hooks\Hook::class);
+        $hook = $this->createMock(\Vamakin\GitFilesChangesHooks\Hooks\Hook::class);
         $hook->method('getFiles')
             ->willReturn(['test_file']);
 
-        $command = $this->getMockBuilder(\Vamakin\PhpPackagesSynchronizer\Commands\Command::class)
+        $command = $this->getMockBuilder(\Vamakin\GitFilesChangesHooks\Commands\Command::class)
             ->setMethods(['handle'])
             ->getMock();
 

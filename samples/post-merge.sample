@@ -6,9 +6,9 @@ require_once('vendor/autoload.php');
 $configPath = './config/git-files-changes-hooks-config.php';
 $config = new \Noodlehaus\Config($configPath);
 
-$options = $config->get('post-checkout');
+$options = $config->get('post-merge');
 
-$hook = new \Vamakin\GitFilesChangesHooks\Hooks\PostCheckoutHook($argv);
+$hook = new \Vamakin\GitFilesChangesHooks\Hooks\PostMergeHook($argv);
 $handler = new \Vamakin\GitFilesChangesHooks\Handler($hook);
 
 foreach ($options as $mask => $command) {

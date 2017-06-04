@@ -1,6 +1,6 @@
 <?php
 
-namespace Vamakin\PhpPackagesSynchronizer\Commands;
+namespace Vamakin\GitFilesChangesHooks\Commands;
 
 class BowerInstallCommand extends BaseCommand
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Vamakin\PhpPackagesSynchronizer;
+namespace Vamakin\GitFilesChangesHooks;
 
-use Vamakin\PhpPackagesSynchronizer\Commands\Command;
-use Vamakin\PhpPackagesSynchronizer\Hooks\Hook;
+use Vamakin\GitFilesChangesHooks\Commands\Command;
+use Vamakin\GitFilesChangesHooks\Hooks\Hook;
 
 class Handler
 {

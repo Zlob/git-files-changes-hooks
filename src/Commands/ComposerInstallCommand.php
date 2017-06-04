@@ -1,6 +1,6 @@
 <?php
 
-namespace Vamakin\PhpPackagesSynchronizer\Commands;
+namespace Vamakin\GitFilesChangesHooks\Commands;
 
 use Composer\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
