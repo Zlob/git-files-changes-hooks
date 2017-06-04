@@ -1,6 +1,6 @@
 <?php
 
-namespace Vamakin\GitHooks\Commands;
+namespace Vamakin\PhpPackagesSynchronizer\Commands;
 
 interface Command
 {

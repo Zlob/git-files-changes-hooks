@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Vamakin\\GitHooks\\": "src/"
+            "Vamakin\\PhpPackagesSynchronizer\\": "src/"
         }
     },
     "autoload-dev": {

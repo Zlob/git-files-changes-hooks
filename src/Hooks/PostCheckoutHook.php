@@ -1,6 +1,6 @@
 <?php
 
-namespace Vamakin\GitHooks\Hooks;
+namespace Vamakin\PhpPackagesSynchronizer\Hooks;
 
 class PostCheckoutHook implements Hook
 {

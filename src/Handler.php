@@ -1,9 +1,9 @@
 <?php
 
-namespace Vamakin\GitHooks;
+namespace Vamakin\PhpPackagesSynchronizer;
 
-use Vamakin\GitHooks\Commands\Command;
-use Vamakin\GitHooks\Hooks\Hook;
+use Vamakin\PhpPackagesSynchronizer\Commands\Command;
+use Vamakin\PhpPackagesSynchronizer\Hooks\Hook;
 
 class Handler
 {

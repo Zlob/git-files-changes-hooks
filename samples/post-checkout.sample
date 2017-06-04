@@ -8,8 +8,8 @@ $config = new \Noodlehaus\Config($configPath);
 
 $postMergeOptions = $config->get('post-merge');
 
-$hook = new \Vamakin\GitHooks\Hooks\PostCheckoutHook($argv);
-$handler = new \Vamakin\GitHooks\Handler($hook);
+$hook = new \Vamakin\PhpPackagesSynchronizer\Hooks\PostCheckoutHook($argv);
+$handler = new \Vamakin\PhpPackagesSynchronizer\Handler($hook);
 
 foreach ($postMergeOptions as $mask => $command) {
     $handler->addCommand($mask, new $command);

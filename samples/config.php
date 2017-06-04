@@ -1,8 +1,8 @@
 <?php
 
-use Vamakin\GitHooks\Commands\BowerInstallCommand;
-use Vamakin\GitHooks\Commands\ComposerInstallCommand;
-use Vamakin\GitHooks\Commands\NpmInstallCommand;
+use Vamakin\PhpPackagesSynchronizer\Commands\BowerInstallCommand;
+use Vamakin\PhpPackagesSynchronizer\Commands\ComposerInstallCommand;
+use Vamakin\PhpPackagesSynchronizer\Commands\NpmInstallCommand;
 
 return $config = [
     'post-update' => [
