@@ -1,6 +1,6 @@
 {
-    "name": "vamakin/git-hooks",
-    "description": "Git hooks for PHP projects",
+    "name": "vamakin/php-packages-synchronizer",
+    "description": "Set of git hooks, that automatically updates your composer, bower and node packages",
     "type": "library",
     "license": "MIT",
     "authors": [
