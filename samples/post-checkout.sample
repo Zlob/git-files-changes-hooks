@@ -1,9 +1,9 @@
 #!/usr/bin/env php
 <?php
 
-require_once('../vendor/autoload.php');
+require_once('vendor/autoload.php');
 
-$configPath = 'config.php';
+$configPath = './config/php-pachages-synchronizer.php';
 $config = new \Noodlehaus\Config($configPath);
 
 $postMergeOptions = $config->get('post-merge');
